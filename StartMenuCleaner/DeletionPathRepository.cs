@@ -21,6 +21,7 @@ namespace StartMenuCleaner {
             @"Programs\Adobe Premiere Pro *.lnk",
             @"Programs\JetBrains",
             @"Programs\Logi",
+            @"Programs\Visual Studio *.lnk",
         }.Select(Glob.Parse).ToList();
 
     }
