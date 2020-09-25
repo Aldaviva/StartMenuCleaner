@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>startmenu.ico</ApplicationIcon>
     <LangVersion>latest</LangVersion>
+    <Company>Ben Hutchison</Company>
+    <Authors>Ben Hutchison</Authors>
+    <Copyright>2020 Ben Hutchison</Copyright>
+    <Description>Start Menu Cleaner</Description>
   </PropertyGroup>
 
   <ItemGroup>

@@ -4,18 +4,10 @@ using DotNet.Globbing;
 
 namespace StartMenuCleaner {
 
-    public interface DeletionPathRepository {
+    internal static class FilesToDelete {
 
-        IEnumerable<Glob> patternsToDelete { get; }
-
-        static DeletionPathRepository defaultInstance => new DeletionPathRepositoryImpl();
-
-    }
-
-    internal class DeletionPathRepositoryImpl: DeletionPathRepository {
-
-        public IEnumerable<Glob> patternsToDelete { get; } = new List<string> {
-            @"Programs\Adobe After Effects *.lnk",
+        public static IEnumerable<Glob> patterns { get; } = new List<string> {
+            @"Programs\Adobe Acrobat *.lnk",
             @"Programs\Adobe Audition *.lnk",
             @"Programs\Adobe Media Encoder *.lnk",
             @"Programs\Adobe Premiere Pro *.lnk",
