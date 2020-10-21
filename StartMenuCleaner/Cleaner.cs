@@ -37,7 +37,11 @@ namespace StartMenuCleaner {
                 // it doesn't exist, which is what we want, so return successfully
             } catch (IOException) {
                 // path may actually be a file, not a directory
-                File.Delete(pathToDelete);
+                try {
+                    File.Delete(pathToDelete);
+                } catch (UnauthorizedAccessException e) {
+                    Console.WriteLine($"Unable to delete {pathToDelete} due to insufficient permissions: {e.Message}");
+                }
             }
         }
 
