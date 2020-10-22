@@ -11,15 +11,16 @@ namespace StartMenuCleaner {
             @"Programs\Adobe Acrobat *.lnk",
             @"Programs\Adobe Audition *.lnk",
             @"Programs\Adobe Creative Cloud.lnk",
-            @"Programs\Adobe Media Encoder *.lnk",
-            @"Programs\Adobe Premiere Pro *.lnk",
             @"Programs\Adobe Lightroom Classic.lnk",
+            @"Programs\Adobe Media Encoder *.lnk",
             @"Programs\Adobe Photoshop *.lnk",
+            @"Programs\Adobe Premiere Pro *.lnk",
             @"Programs\JetBrains",
             @"Programs\Logi",
-            @"Programs\TagScanner",
             @"Programs\Microsoft Office Tools",
+            @"Programs\TagScanner",
             @"Programs\Visual Studio *.lnk",
+            @"Programs\WinSCP.lnk",
         }.Select(Glob.Parse).ToList();
 
     }
