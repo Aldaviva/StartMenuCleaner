@@ -9,8 +9,13 @@ namespace StartMenuCleaner {
         public static IEnumerable<Glob> patterns { get; } = new List<string> {
             @"Programs\Accessories",
             @"Programs\Adobe Acrobat *.lnk",
+            @"Programs\Adobe After Effects *.lnk",
             @"Programs\Adobe Audition *.lnk",
+            @"Programs\Adobe Bridge *.lnk",
             @"Programs\Adobe Creative Cloud.lnk",
+            @"Programs\Adobe Dreamweaver *.lnk",
+            @"Programs\Adobe Illustrator *.lnk",
+            @"Programs\Adobe InDesign *.lnk",
             @"Programs\Adobe Lightroom Classic.lnk",
             @"Programs\Adobe Media Encoder *.lnk",
             @"Programs\Adobe Photoshop *.lnk",
