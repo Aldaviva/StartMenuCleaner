@@ -20,6 +20,8 @@ namespace StartMenuCleaner {
             @"Programs\Adobe Media Encoder *.lnk",
             @"Programs\Adobe Photoshop *.lnk",
             @"Programs\Adobe Premiere Pro *.lnk",
+            @"Programs\Fiddler 4.lnk",
+            @"Programs\Fiddler ScriptEditor.lnk",
             @"Programs\JetBrains",
             @"Programs\Logi",
             @"Programs\Microsoft Office Tools",
