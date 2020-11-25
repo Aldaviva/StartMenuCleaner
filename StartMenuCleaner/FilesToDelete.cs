@@ -26,8 +26,11 @@ namespace StartMenuCleaner {
             @"Programs\Logi",
             @"Programs\Microsoft Office Tools",
             @"Programs\TagScanner",
-            @"Programs\Visual Studio *.lnk",
+            @"Programs\Visual Studio *",
             @"Programs\WinSCP.lnk",
+            @"Programs\Outlook.lnk",
+            @"Programs\Progress",
+            @"Programs\Hex Workshop v*",
         }.Select(Glob.Parse).ToList();
 
     }
