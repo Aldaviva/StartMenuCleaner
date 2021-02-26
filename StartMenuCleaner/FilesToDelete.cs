@@ -8,6 +8,8 @@ namespace StartMenuCleaner {
 
         public static IEnumerable<Glob> patterns { get; } = new List<string> {
             @"Programs\Accessories",
+            @"Programs\Accessibility",
+            @"Programs\Administrative Tools",
             @"Programs\Adobe Acrobat *.lnk",
             @"Programs\Adobe After Effects *.lnk",
             @"Programs\Adobe Audition *.lnk",
@@ -22,15 +24,20 @@ namespace StartMenuCleaner {
             @"Programs\Adobe Premiere Pro *.lnk",
             @"Programs\Fiddler 4.lnk",
             @"Programs\Fiddler ScriptEditor.lnk",
+            @"Programs\Git",
+            @"Programs\Hex Workshop v*",
             @"Programs\JetBrains",
+            @"Programs\KeePass 2.lnk",
             @"Programs\Logi",
             @"Programs\Microsoft Office Tools",
-            @"Programs\TagScanner",
-            @"Programs\Visual Studio *",
-            @"Programs\WinSCP.lnk",
             @"Programs\Outlook.lnk",
             @"Programs\Progress",
-            @"Programs\Hex Workshop v*",
+            @"Programs\System Tools",
+            @"Programs\TagScanner",
+            @"Programs\VideoLAN",
+            @"Programs\Visual Studio *",
+            @"Programs\Winaero Tweaker",
+            @"Programs\WinSCP.lnk",
         }.Select(Glob.Parse).ToList();
 
     }

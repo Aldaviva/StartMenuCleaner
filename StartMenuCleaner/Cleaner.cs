@@ -23,7 +23,9 @@ namespace StartMenuCleaner {
             }
         }
 
-        private static string getStartMenuDirectory(bool isUser) => Path.Combine(Environment.GetFolderPath(isUser ? ApplicationData : CommonApplicationData), @"Microsoft\Windows\Start Menu");
+        private static string getStartMenuDirectory(bool isUser) {
+            return Path.Combine(Environment.GetFolderPath(isUser ? ApplicationData : CommonApplicationData), @"Microsoft\Windows\Start Menu");
+        }
 
         private static IEnumerable<FoundStartMenuPath> findFilesAndDirectories(string baseDirectory) {
             return Directory.EnumerateFileSystemEntries(baseDirectory, "*", SearchOption.AllDirectories)
@@ -39,9 +41,16 @@ namespace StartMenuCleaner {
                 // path may actually be a file, not a directory
                 try {
                     File.Delete(pathToDelete);
-                } catch (UnauthorizedAccessException e) {
-                    Console.WriteLine($"Unable to delete {pathToDelete} due to insufficient permissions: {e.Message}");
+                } catch (UnauthorizedAccessException) {
+                    try {
+                        File.SetAttributes(pathToDelete, FileAttributes.Normal);
+                        File.Delete(pathToDelete);
+                    } catch (UnauthorizedAccessException e2) {
+                        Console.WriteLine($"Unable to delete {pathToDelete} due to insufficient permissions: {e2.Message}");
+                    }
                 }
+            } catch (Exception e) {
+                Console.WriteLine($"Unable to delete {pathToDelete} due to error {e.Message}");
             }
         }
 

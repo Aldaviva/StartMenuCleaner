@@ -8,12 +8,12 @@
     <LangVersion>latest</LangVersion>
     <Company>Ben Hutchison</Company>
     <Authors>Ben Hutchison</Authors>
-    <Copyright>2020 Ben Hutchison</Copyright>
+    <Copyright>2021 Ben Hutchison</Copyright>
     <Description>Start Menu Cleaner</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNet.Glob" Version="3.1.0" />
+    <PackageReference Include="DotNet.Glob" Version="3.1.2" />
     <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.18.2" />
   </ItemGroup>
 
