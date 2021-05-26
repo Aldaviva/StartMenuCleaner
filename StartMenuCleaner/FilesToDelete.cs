@@ -29,6 +29,7 @@ namespace StartMenuCleaner {
             @"Programs\Hex Workshop v*",
             @"Programs\JetBrains",
             @"Programs\KeePass 2.lnk",
+            @"Programs\Launchy",
             @"Programs\Logi",
             @"Programs\Microsoft Office Tools",
             @"Programs\Outlook.lnk",
