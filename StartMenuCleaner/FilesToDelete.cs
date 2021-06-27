@@ -35,6 +35,7 @@ namespace StartMenuCleaner {
             @"Programs\Outlook.lnk",
             @"Programs\Progress",
             @"Programs\System Tools",
+            @"Programs\Steam",
             @"Programs\TagScanner",
             @"Programs\VideoLAN",
             @"Programs\Visual Studio *",
