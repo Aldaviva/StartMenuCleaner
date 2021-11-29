@@ -1,0 +1,11 @@
+![StartMenuCleaner](https://github.com/Aldaviva/StartMenuCleaner/raw/master/StartMenuCleaner/startmenu.ico) StartMenuCleaner
+===
+
+This program deletes files and folders from the Start Menu which are added by installing program updates. They clutter up the Start Menu, especially if you've already made shortcuts to these programs and put them in a custom subfolder.
+
+This program will find the [hardcoded files](https://github.com/Aldaviva/StartMenuCleaner/blob/master/StartMenuCleaner/FilesToDelete.cs), delete them, and then exit.
+
+You can run this program periodically using a scheduled task.
+
+## Requirements
+- [.NET Core 3.1 Runtime](https://dotnet.microsoft.com/download/dotnet/3.1) or later, or [.NET 5 Runtime](https://dotnet.microsoft.com/download/dotnet/5.0) or later
