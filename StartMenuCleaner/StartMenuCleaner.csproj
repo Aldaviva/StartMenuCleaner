@@ -8,7 +8,7 @@
     <LangVersion>latest</LangVersion>
     <Company>Ben Hutchison</Company>
     <Authors>Ben Hutchison</Authors>
-    <Copyright>2021 Ben Hutchison</Copyright>
+    <Copyright>2022 Ben Hutchison</Copyright>
     <Description>Start Menu Cleaner</Description>
     <RollForward>Major</RollForward>
   </PropertyGroup>
