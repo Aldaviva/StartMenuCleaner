@@ -1,21 +1,13 @@
-﻿using System.IO;
+﻿namespace StartMenuCleaner;
 
-namespace StartMenuCleaner {
+internal readonly struct FoundStartMenuPath {
 
-    public static partial class Cleaner {
+    internal readonly string relativePath;
+    internal readonly string absolutePath;
 
-        private readonly struct FoundStartMenuPath {
-
-            internal readonly string relativePath;
-            internal readonly string absolutePath;
-
-            internal FoundStartMenuPath(string absolutePath, string baseDirectory) {
-                this.absolutePath = absolutePath;
-                relativePath      = Path.GetRelativePath(baseDirectory, absolutePath);
-            }
-
-        }
-
+    internal FoundStartMenuPath(string absolutePath, string baseDirectory) {
+        this.absolutePath = absolutePath;
+        relativePath      = Path.GetRelativePath(baseDirectory, absolutePath);
     }
 
 }
