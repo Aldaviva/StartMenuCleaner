@@ -9,7 +9,7 @@ internal static class FilesToDelete {
         @"Programs\Accessibility",
         @"Programs\Accessories",
         @"Programs\Administrative Tools",
-        @"Programs\Adobe Acrobat *.lnk",
+        @"Programs\Adobe Acrobat*.lnk",
         @"Programs\Adobe After Effects *.lnk",
         @"Programs\Adobe Audition *.lnk",
         @"Programs\Adobe Bridge *.lnk",
