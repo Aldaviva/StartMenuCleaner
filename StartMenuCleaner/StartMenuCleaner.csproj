@@ -3,15 +3,17 @@
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net6.0-windows</TargetFramework>
+        <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
         <Nullable>enable</Nullable>
         <ApplicationIcon>startmenu.ico</ApplicationIcon>
         <LangVersion>latest</LangVersion>
         <Company>Ben Hutchison</Company>
         <Authors>Ben Hutchison</Authors>
-        <Copyright>© 2022 Ben Hutchison</Copyright>
+        <Copyright>© 2023 Ben Hutchison</Copyright>
         <Description>Start Menu Cleaner</Description>
         <RollForward>Major</RollForward>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

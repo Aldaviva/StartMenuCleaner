@@ -3,25 +3,31 @@ name: .NET
 on:
   push:
     branches: [ master ]
-
   workflow_dispatch:
 
 jobs:
   build:
     env:
       ProjectName: StartMenuCleaner
+      TargetPlatform: win10-x64
 
     runs-on: windows-latest
 
     steps:
     - name: Clone
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3.3.0
         
+    - name: Restore
+      run: dotnet restore --runtime ${{ env.TargetPlatform }} --locked-mode --verbosity normal
+
+    - name: Build
+      run: dotnet build ${{ env.ProjectName }} --no-restore --runtime ${{ env.TargetPlatform }} --configuration Release --no-self-contained --verbosity normal
+
     - name: Publish
-      run: dotnet publish --configuration Release -p:PublishSingleFile=true --runtime win10-x64 --self-contained false
-      
+      run: dotnet publish ${{ env.ProjectName }} --no-build --configuration Release -p:PublishSingleFile=true --runtime ${{ env.TargetPlatform }} --self-contained false
+
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.2
       with:
         name: ${{ env.ProjectName }}.exe
         path: ${{ env.ProjectName }}/bin/Release/**/publish/*.exe

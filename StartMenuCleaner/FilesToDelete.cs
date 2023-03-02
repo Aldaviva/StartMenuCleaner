@@ -42,6 +42,7 @@ internal static class FilesToDelete {
         @"Programs\TagScanner",
         @"Programs\VideoLAN",
         @"Programs\Visual Studio *",
+        @"Programs\Vivaldi.lnk",
         @"Programs\Winaero Tweaker",
         @"Programs\WinSCP.lnk",
     }.Select(Glob.Parse).ToList();
