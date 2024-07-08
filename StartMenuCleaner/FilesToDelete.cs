@@ -40,10 +40,12 @@ internal static class FilesToDelete {
         @"Programs\Steam",
         @"Programs\System Tools",
         @"Programs\TagScanner",
+        @"Programs\UltraUXThemePatcher",
         @"Programs\VideoLAN",
         @"Programs\Visual Studio *",
         @"Programs\Vivaldi.lnk",
         @"Programs\Winaero Tweaker",
+        @"Programs\Windows Kits",
         @"Programs\WinSCP.lnk",
     }.Select(Glob.Parse).ToList();
 

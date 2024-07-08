@@ -21,14 +21,11 @@ public static class Cleaner {
         }
     }
 
-    private static string getStartMenuDirectory(bool isUser) {
-        return Path.Combine(Environment.GetFolderPath(isUser ? ApplicationData : CommonApplicationData), @"Microsoft\Windows\Start Menu");
-    }
+    private static string getStartMenuDirectory(bool isUser) => Path.Combine(Environment.GetFolderPath(isUser ? ApplicationData : CommonApplicationData), @"Microsoft\Windows\Start Menu");
 
-    private static IEnumerable<FoundStartMenuPath> findFilesAndDirectories(string baseDirectory) {
-        return Directory.EnumerateFileSystemEntries(baseDirectory, "*", SearchOption.AllDirectories)
+    private static IEnumerable<FoundStartMenuPath> findFilesAndDirectories(string baseDirectory) =>
+        Directory.EnumerateFileSystemEntries(baseDirectory, "*", SearchOption.AllDirectories)
             .Select(path => new FoundStartMenuPath(path, baseDirectory));
-    }
 
     private static void deleteDirectoryOrFile(string pathToDelete) {
         try {
