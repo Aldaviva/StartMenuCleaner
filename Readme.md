@@ -8,4 +8,4 @@ This program will find the [hardcoded files](https://github.com/Aldaviva/StartMe
 You can run this program periodically using a scheduled task.
 
 ## Requirements
-- [.NET 6 Runtime](https://dotnet.microsoft.com/download/dotnet/6.0) or later
+- [.NET 10 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) or later

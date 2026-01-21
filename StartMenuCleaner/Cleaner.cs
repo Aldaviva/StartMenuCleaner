@@ -1,4 +1,4 @@
-﻿using static System.Environment.SpecialFolder;
+using static System.Environment.SpecialFolder;
 
 namespace StartMenuCleaner;
 
@@ -7,9 +7,7 @@ public static class Cleaner {
     private static readonly string MACHINE_START_DIRECTORY = getStartMenuDirectory(false);
     private static readonly string USER_START_DIRECTORY    = getStartMenuDirectory(true);
 
-    private static void Main() {
-        cleanStartMenu();
-    }
+    private static void Main() => cleanStartMenu();
 
     private static void cleanStartMenu() {
         IEnumerable<string> pathsToDelete = from startMenuFileOrDirectory in findFilesAndDirectories(MACHINE_START_DIRECTORY).Concat(findFilesAndDirectories(USER_START_DIRECTORY))

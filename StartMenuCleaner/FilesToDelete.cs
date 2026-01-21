@@ -1,4 +1,4 @@
-﻿using DotNet.Globbing;
+using DotNet.Globbing;
 
 namespace StartMenuCleaner;
 
@@ -43,7 +43,9 @@ internal static class FilesToDelete {
         @"Programs\UltraUXThemePatcher",
         @"Programs\VideoLAN",
         @"Programs\Visual Studio *",
+        @"Programs\Visual Studio.lnk",
         @"Programs\Vivaldi.lnk",
+        @"Programs\VMware",
         @"Programs\Winaero Tweaker",
         @"Programs\Windows Kits",
         @"Programs\WinSCP.lnk",
